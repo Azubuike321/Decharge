@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="https://res.cloudinary.com/djh1zkn3l/image/upload/v1746359824/xuezkgppkfmsp95uudz0_rvdkyt.png">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DeCharge</title>
@@ -47,10 +48,10 @@
     <div id="vanta-bg" class="absolute inset-0 -z-10"></div>
   
     <!-- Hero Content Container -->
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 relative z-10">
       
-      <!-- Text Block with Background -->
-      <div class="max-w-xl space-y-6 bg-black/20 backdrop-blur-md p-6 rounded-2xl text-white shadow-lg border-white rounded-md border-2 border-opacity-20">
+      <!-- Text Block -->
+      <div class="md:basis-1/2 space-y-6 bg-black/20 backdrop-blur-md p-6 rounded-2xl text-white shadow-lg border border-white border-opacity-20">
         <h1 class="text-5xl font-bold leading-tight">
           Power the Future.<br>
           <span class="text-cyan-400">On-Chain.</span>
@@ -58,20 +59,24 @@
         <p class="text-lg text-gray-300">
           DeCharge is a decentralized protocol revolutionizing how energy flows through Web3, connecting sustainable power sources to blockchain infrastructure.
         </p>
-        <div class="flex space-x-4">
+        <div class="flex flex-wrap gap-4">
           <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold">Buy Token</button>
           <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-semibold">Join Airdrop</button>
-          <button class="border border-gray-300 px-4 py-2 rounded-full font-semibold text-white">Litepaper</button>
+          <button class="border border-gray-300 px-4 py-2 rounded-full font-semibold text-white">Whitepaper</button>
         </div>
       </div>
   
       <!-- Hero Image -->
-      <img src="https://res.cloudinary.com/djh1zkn3l/video/upload/v1746401120/Teal_and_Black_Profesional_Pro_Gaming_Mouse_Instagram_Post_npb6lh.mp4" alt="DeCharge Graphic" class="w-64 h-64 mt-10 md:mt-0" />
+      <div class="md:basis-1/2 flex justify-center relative">
+        <img src="https://res.cloudinary.com/djh1zkn3l/image/upload/v1746408668/virtual_kfkro4.png"
+          alt="DeCharge Graphic"
+          class="-bottom-[250px] object-contain absolute" />
+      </div>
     </div>
   
-    <!-- Countdown Section with Background -->
-    <div class="text-center mt-12 relative z-10 ">
-      <div class="inline-block  backdrop-blur-md p-6 rounded-xl text-white shadow-lg bg-black/20 backdrop-blur-md shadow-lg  border-white rounded-md border-2 border-opacity-20" >
+    <!-- Countdown Timer -->
+    <div class="text-center mt-16">
+      <div class="inline-block bg-black/20 backdrop-blur-md p-6 rounded-xl text-white shadow-lg border border-white border-opacity-20">
         <h2 class="text-lg font-semibold mb-2">Token Launch Countdown</h2>
         <div class="flex justify-center space-x-6 text-2xl font-bold" id="countdown">
           <div class="text-center">
@@ -93,25 +98,62 @@
         </div>
       </div>
     </div>
-  </section>
+  </section>  
+<!-- Include CountUp.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.umd.js"></script>
+
 <!-- Stats Section -->
-<section class="py-20 px-6 bg-black/80 backdrop-blur-md text-white">
+<section id="stats" class="py-20 px-6 bg-black/80 backdrop-blur-md text-white">
   <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center">
     <div class="bg-black/30 border border-cyan-400/30 shadow-xl rounded-lg py-8 px-4 transform transition duration-300 hover:scale-105 hover:shadow-cyan-500/30">
-      <h3 class="text-cyan-400 text-3xl font-bold">10,000,000</h3>
+      <h3 id="stat-tokens" class="text-cyan-400 text-3xl font-bold">0</h3>
       <p class="text-gray-300">Total DeCharge Tokens<br>in circulation</p>
     </div>
     <div class="bg-black/30 border border-cyan-400/30 shadow-xl rounded-lg py-8 px-4 transform transition duration-300 hover:scale-105 hover:shadow-cyan-500/30">
-      <h3 class="text-cyan-400 text-3xl font-bold">1,250</h3>
+      <h3 id="stat-nodes" class="text-cyan-400 text-3xl font-bold">0</h3>
       <p class="text-gray-300">Energy Nodes<br>online worldwide</p>
     </div>
     <div class="bg-black/30 border border-cyan-400/30 shadow-xl rounded-lg py-8 px-4 transform transition duration-300 hover:scale-105 hover:shadow-cyan-500/30">
-      <h3 class="text-cyan-400 text-3xl font-bold">7,500</h3>
+      <h3 id="stat-wallets" class="text-cyan-400 text-3xl font-bold">0</h3>
       <p class="text-gray-300">Wallets Connected<br>and growing</p>
     </div>
   </div>
 </section>
 
+<!-- Scroll-triggered Counter Script -->
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const options = { duration: 5 }; // Slower count
+
+    const counters = [
+      new countUp.CountUp('stat-tokens', 10000000, options),
+      new countUp.CountUp('stat-nodes', 1250, options),
+      new countUp.CountUp('stat-wallets', 7500, options)
+    ];
+
+    let triggered = false;
+
+    function isInViewport(el) {
+      const rect = el.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight)
+      );
+    }
+
+    function runCounters() {
+      const section = document.getElementById('stats');
+      if (!triggered && isInViewport(section)) {
+        counters.forEach(counter => {
+          if (!counter.error) counter.start();
+        });
+        triggered = true;
+      }
+    }
+
+    window.addEventListener('scroll', runCounters);
+    runCounters(); // run on load in case already in view
+  });
+</script>
 <!-- Features Section -->
 <section class="py-20 px-6 bg-black text-white">
   <div class="max-w-4xl mx-auto text-center mb-12">
@@ -253,9 +295,9 @@
         <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse"></div>
         <h3 class="text-white font-bold text-2xl mb-2">Q1 2023 – Foundation</h3>
         <ul class="space-y-1 text-gray-300 text-xl">
-          <li class="flex items-start gap-2"><span>⚡</span> Concept development and team formation</li>
-          <li class="flex items-start gap-2"><span>⚡</span> Initial whitepaper release</li>
-          <li class="flex items-start gap-2"><span>⚡</span> Seed funding secured</li>
+          <li class="flex items-start gap-2"><span>✅</span> Concept development and team formation</li>
+          <li class="flex items-start gap-2"><span>✅</span> Initial whitepaper release</li>
+          <li class="flex items-start gap-2"><span>✅</span> Seed funding secured</li>
         </ul>
       </div>
 
@@ -264,9 +306,9 @@
         <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse"></div>
         <h3 class="text-white font-bold text-2xl mb-2">Q2 2023 – Development</h3>
         <ul class="space-y-1 text-gray-300 text-xl">
-          <li class="flex items-start gap-2"><span>⚡</span> Smart contract development</li>
-          <li class="flex items-start gap-2"><span>⚡</span> First prototype of Smart Grid Node</li>
-          <li class="flex items-start gap-2"><span>⚡</span> Community building initiatives</li>
+          <li class="flex items-start gap-2"><span>✅</span> Smart contract development</li>
+          <li class="flex items-start gap-2"><span>✅</span> First prototype of Smart Grid Node</li>
+          <li class="flex items-start gap-2"><span>✅</span> Community building initiatives</li>
         </ul>
       </div>
 
@@ -275,9 +317,9 @@
         <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse"></div>
         <h3 class="text-white font-bold text-2xl mb-2">Q3 2023 – Testing</h3>
         <ul class="space-y-1 text-gray-300 text-xl">
-          <li class="flex items-start gap-2"><span>⚡</span> Testnet launch</li>
-          <li class="flex items-start gap-2"><span>⚡</span> Security audit completion</li>
-          <li class="flex items-start gap-2"><span>⚡</span> Strategic partnerships announcement</li>
+          <li class="flex items-start gap-2"><span>⬇</span> Testnet launch</li>
+          <li class="flex items-start gap-2"><span>⬇</span> Security audit completion</li>
+          <li class="flex items-start gap-2"><span>⬇</span> Strategic partnerships announcement</li>
         </ul>
       </div>
 
@@ -286,9 +328,9 @@
         <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse"></div>
         <h3 class="text-white font-bold text-2xl mb-2">Q4 2023 – Launch</h3>
         <ul class="space-y-1 text-gray-300 text-xl">
-          <li class="flex items-start gap-2"><span>⚡</span> Token Generation Event</li>
-          <li class="flex items-start gap-2"><span>⚡</span> Mainnet launch</li>
-          <li class="flex items-start gap-2"><span>⚡</span> Initial exchange listings</li>
+          <li class="flex items-start gap-2"><span>⬇</span> Token Generation Event</li>
+          <li class="flex items-start gap-2"><span>⬇</span> Mainnet launch</li>
+          <li class="flex items-start gap-2"><span>⬇</span> Initial exchange listings</li>
         </ul>
       </div>
 
@@ -297,9 +339,9 @@
         <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse "></div>
         <h3 class="text-white font-bold text-2xl mb-2">Q1 2024 – Expansion</h3>
         <ul class="space-y-1 text-gray-300 text-xl">
-          <li class="flex items-start gap-2"><span>⚡</span> Global node network expansion</li>
-          <li class="flex items-start gap-2"><span>⚡</span> Cross-chain integration</li>
-          <li class="flex items-start gap-2"><span>⚡</span> Developer grants program</li>
+          <li class="flex items-start gap-2"><span>⬇</span> Global node network expansion</li>
+          <li class="flex items-start gap-2"><span>⬇</span> Cross-chain integration</li>
+          <li class="flex items-start gap-2"><span>⬇</span> Developer grants program</li>
         </ul>
       </div>
     </div>
