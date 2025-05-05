@@ -23,11 +23,14 @@
     }
   </style>
 </head>
-<body class="bg-white text-gray-900 font-sans">
+<body class=" text-gray-900 font-sans">
   <!-- Navbar -->
-  <header class="w-full fixed top-0 left-0 bg-white shadow z-50">
+  <header class="w-full fixed top-0 left-0 bg-black/20 backdrop-blur-md text-white z-50 ">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="text-2xl font-bold text-cyan-500">DeCharge</div>
+      <div class="text-2xl font-bold text-cyan-500 flex items-center">
+        <img class="w-10" src="https://res.cloudinary.com/djh1zkn3l/image/upload/v1746397384/decharge_logo_transp_h6iwiy.png" alt="dechargeLogo" >
+        <p>Decharge</p>
+      </div>
       <nav class="space-x-6 hidden md:block">
         <a href="#features" class="hover:text-cyan-500">Features</a>
         <a href="#how-it-works" class="hover:text-cyan-500">How It Works</a>
@@ -39,85 +42,100 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="pt-32 pb-20 px-6">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between">
-      <div class="max-w-xl space-y-6">
-        <h1 class="text-5xl font-bold">Power the Future.<br><span class="text-cyan-500">On-Chain.</span></h1>
-        <p class="text-lg text-gray-700">DeCharge is a decentralized protocol revolutionizing how energy flows through Web3, connecting sustainable power sources to blockchain infrastructure.</p>
+  <section class="relative pt-32 pb-20 px-6 overflow-hidden">
+    <!-- Vanta Background -->
+    <div id="vanta-bg" class="absolute inset-0 -z-10"></div>
+  
+    <!-- Hero Content Container -->
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between relative z-10">
+      
+      <!-- Text Block with Background -->
+      <div class="max-w-xl space-y-6 bg-black/20 backdrop-blur-md p-6 rounded-2xl text-white shadow-lg border-white rounded-md border-2 border-opacity-20">
+        <h1 class="text-5xl font-bold leading-tight">
+          Power the Future.<br>
+          <span class="text-cyan-400">On-Chain.</span>
+        </h1>
+        <p class="text-lg text-gray-300">
+          DeCharge is a decentralized protocol revolutionizing how energy flows through Web3, connecting sustainable power sources to blockchain infrastructure.
+        </p>
         <div class="flex space-x-4">
           <button class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-semibold">Buy Token</button>
           <button class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full font-semibold">Join Airdrop</button>
-          <button class="border border-gray-300 px-4 py-2 rounded-full font-semibold">Litepaper</button>
+          <button class="border border-gray-300 px-4 py-2 rounded-full font-semibold text-white">Litepaper</button>
         </div>
       </div>
-      <img src="/path-to-your-hero-graphic.png" alt="DeCharge Graphic" class="w-64 h-64 mt-10 md:mt-0" />
+  
+      <!-- Hero Image -->
+      <img src="https://res.cloudinary.com/djh1zkn3l/video/upload/v1746401120/Teal_and_Black_Profesional_Pro_Gaming_Mouse_Instagram_Post_npb6lh.mp4" alt="DeCharge Graphic" class="w-64 h-64 mt-10 md:mt-0" />
     </div>
-    <div class="text-center mt-12">
-      <h2 class="text-lg font-semibold">Token Launch Countdown</h2>
-      <div class="flex justify-center space-x-6 mt-2 text-2xl font-bold" id="countdown">
-        <div class="text-center">
-          <div id="days">--</div>
-          <div class="text-sm font-medium">DAYS</div>
-        </div>
-        <div class="text-center">
-          <div id="hours">--</div>
-          <div class="text-sm font-medium">HOURS</div>
-        </div>
-        <div class="text-center">
-          <div id="minutes">--</div>
-          <div class="text-sm font-medium">MINUTES</div>
-        </div>
-        <div class="text-center">
-          <div id="seconds">--</div>
-          <div class="text-sm font-medium">SECONDS</div>
+  
+    <!-- Countdown Section with Background -->
+    <div class="text-center mt-12 relative z-10 ">
+      <div class="inline-block  backdrop-blur-md p-6 rounded-xl text-white shadow-lg bg-black/20 backdrop-blur-md shadow-lg  border-white rounded-md border-2 border-opacity-20" >
+        <h2 class="text-lg font-semibold mb-2">Token Launch Countdown</h2>
+        <div class="flex justify-center space-x-6 text-2xl font-bold" id="countdown">
+          <div class="text-center">
+            <div id="days">--</div>
+            <div class="text-sm font-medium">DAYS</div>
+          </div>
+          <div class="text-center">
+            <div id="hours">--</div>
+            <div class="text-sm font-medium">HOURS</div>
+          </div>
+          <div class="text-center">
+            <div id="minutes">--</div>
+            <div class="text-sm font-medium">MINUTES</div>
+          </div>
+          <div class="text-center">
+            <div id="seconds">--</div>
+            <div class="text-sm font-medium">SECONDS</div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+<!-- Stats Section -->
+<section class="py-20 px-6 bg-black/80 backdrop-blur-md text-white">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center">
+    <div class="bg-black/30 border border-cyan-400/30 shadow-xl rounded-lg py-8 px-4 transform transition duration-300 hover:scale-105 hover:shadow-cyan-500/30">
+      <h3 class="text-cyan-400 text-3xl font-bold">10,000,000</h3>
+      <p class="text-gray-300">Total DeCharge Tokens<br>in circulation</p>
+    </div>
+    <div class="bg-black/30 border border-cyan-400/30 shadow-xl rounded-lg py-8 px-4 transform transition duration-300 hover:scale-105 hover:shadow-cyan-500/30">
+      <h3 class="text-cyan-400 text-3xl font-bold">1,250</h3>
+      <p class="text-gray-300">Energy Nodes<br>online worldwide</p>
+    </div>
+    <div class="bg-black/30 border border-cyan-400/30 shadow-xl rounded-lg py-8 px-4 transform transition duration-300 hover:scale-105 hover:shadow-cyan-500/30">
+      <h3 class="text-cyan-400 text-3xl font-bold">7,500</h3>
+      <p class="text-gray-300">Wallets Connected<br>and growing</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Stats Section -->
-  <section class="py-20 px-6 bg-gray-50">
-    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 text-center">
-      <div class="bg-white shadow rounded-lg py-8 px-4">
-        <h3 class="text-cyan-500 text-3xl font-bold">10,000,000</h3>
-        <p class="text-gray-600">Total DeCharge Tokens<br>in circulation</p>
-      </div>
-      <div class="bg-white shadow rounded-lg py-8 px-4">
-        <h3 class="text-cyan-500 text-3xl font-bold">1,250</h3>
-        <p class="text-gray-600">Energy Nodes<br>online worldwide</p>
-      </div>
-      <div class="bg-white shadow rounded-lg py-8 px-4">
-        <h3 class="text-cyan-500 text-3xl font-bold">7,500</h3>
-        <p class="text-gray-600">Wallets Connected<br>and growing</p>
-      </div>
+<!-- Features Section -->
+<section class="py-20 px-6 bg-black text-white">
+  <div class="max-w-4xl mx-auto text-center mb-12">
+    <h2 class="text-3xl font-bold text-cyan-400">Core Features</h2>
+    <p class="text-gray-300 mt-2">Revolutionizing energy distribution through blockchain technology</p>
+  </div>
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+    <div class="bg-black/30 border border-cyan-400/20 shadow-xl rounded-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-cyan-400/40">
+      <div class="text-4xl text-cyan-400 mb-4">⚡</div>
+      <h3 class="text-xl font-semibold">Instant Settlement</h3>
+      <p class="text-gray-300">Real-time energy transactions with zero latency, powered by Solana's high-speed blockchain.</p>
     </div>
-  </section>
-
-  <!-- Features Section -->
-  <section class="py-20 px-6">
-    <div class="max-w-4xl mx-auto text-center mb-12">
-      <h2 class="text-3xl font-bold">Core Features</h2>
-      <p class="text-gray-600 mt-2">Revolutionizing energy distribution through blockchain technology</p>
+    <div class="bg-black/30 border border-green-400/20 shadow-xl rounded-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-green-400/40">
+      <div class="text-4xl text-green-400 mb-4">🔋</div>
+      <h3 class="text-xl font-semibold">Sustainable Staking</h3>
+      <p class="text-gray-300">Earn rewards while supporting green energy initiatives through our carbon-negative staking protocol.</p>
     </div>
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-      <div class="bg-white shadow rounded-lg p-6 text-center">
-        <div class="text-3xl text-cyan-500 mb-4">⚡</div>
-        <h3 class="text-xl font-semibold">Instant Settlement</h3>
-        <p class="text-gray-600">Real-time energy transactions with zero latency, powered by Solana's high-speed blockchain.</p>
-      </div>
-      <div class="bg-white shadow rounded-lg p-6 text-center">
-        <div class="text-3xl text-cyan-500 mb-4">🔋</div>
-        <h3 class="text-xl font-semibold">Sustainable Staking</h3>
-        <p class="text-gray-600">Earn rewards while supporting green energy initiatives through our carbon-negative staking protocol.</p>
-      </div>
-      <div class="bg-white shadow rounded-lg p-6 text-center">
-        <div class="text-3xl text-cyan-500 mb-4">🌐</div>
-        <h3 class="text-xl font-semibold">Cross-Chain Compatible</h3>
-        <p class="text-gray-600">Seamlessly integrate with multiple blockchain ecosystems for maximum interoperability.</p>
-      </div>
+    <div class="bg-black/30 border border-blue-400/20 shadow-xl rounded-lg p-6 text-center transform transition duration-300 hover:scale-105 hover:shadow-blue-400/40">
+      <div class="text-4xl text-blue-400 mb-4">🌐</div>
+      <h3 class="text-xl font-semibold">Cross-Chain Compatible</h3>
+      <p class="text-gray-300">Seamlessly integrate with multiple blockchain ecosystems for maximum interoperability.</p>
     </div>
-  </section>
+  </div>
+</section>
 
   <script>
     // Countdown Timer
@@ -139,5 +157,394 @@
       document.getElementById("seconds").textContent = seconds;
     }, 1000);
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>  
+  <script>
+    VANTA.NET({
+      el: "#vanta-bg",
+      mouseControls: true,
+      touchControls: true,
+      gyroControls: false,
+      minHeight: 200.00,
+      minWidth: 200.00,
+      scale: 1.00,
+      scaleMobile: 1.00,
+      color: 0x00ffff,      // Neon Electric Blue
+      backgroundColor: 0x000000,
+      points: 12.0,
+      maxDistance: 20.0,
+      spacing: 15.0
+    });
+  </script>  
 </body>
 </html>
+<section id="how-it-works" class="bg-black py-24 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-5xl font-bold text-white bg-clip-text bg-gradient-to-r from-electric-blue to-neon-green mb-4 animate-fade-up">
+      How DeCharge Works
+    </h2>
+    <p class="text-gray-300 text-lg mb-16 max-w-2xl mx-auto animate-fade-up delay-100">
+      A decentralized energy ecosystem powered by blockchain technology and electrified governance.
+    </p>
+
+    <div class="grid gap-10 md:grid-cols-3">
+      <!-- Step 1 -->
+      <div class="bg-gradient-to-br from-[#0f172a] to-[#1e293b] border border-electric-blue rounded-2xl shadow-lg p-6 hover:shadow-electric transition duration-300 animate-fade-up">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-neon-green to-electric-blue flex items-center justify-center text-black font-bold mr-4 shadow-lg  text-white">
+            1
+          </div>
+          <h3 class="text-xl font-semibold text-white">Smart Grid Nodes</h3>
+        </div>
+        <p class="text-gray-400 text-sm">
+          Producers connect to the DeCharge grid via secure Smart Grid Nodes, validating clean energy production through blockchain.
+        </p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="bg-gradient-to-br from-[#0f172a] to-[#1e293b] border border-electric-blue rounded-2xl shadow-lg p-6 hover:shadow-electric transition duration-300 animate-fade-up delay-100">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-neon-green to-electric-blue flex items-center justify-center text-black font-bold mr-4 shadow-lg">
+            2
+          </div>
+          <h3 class="text-xl font-semibold text-white">Tokenomics Cycle</h3>
+        </div>
+        <p class="text-gray-400 text-sm">
+          Energy is tokenized into $DECHARGE, linking clean energy generation directly to on-chain value creation and market flows.
+        </p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="bg-gradient-to-br from-[#0f172a] to-[#1e293b] border border-electric-blue rounded-2xl shadow-lg p-6 hover:shadow-electric transition duration-300 animate-fade-up delay-200">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-neon-green to-electric-blue flex items-center justify-center text-black font-bold mr-4 shadow-lg">
+            3
+          </div>
+          <h3 class="text-xl font-semibold text-white">Governance Model</h3>
+        </div>
+        <p class="text-gray-400 text-sm">
+          Token holders shape the future — voting on upgrades, node incentives, and energy allocation in a decentralized ecosystem.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CTA Button -->
+    <div class=" bg-black text-center pt-20">
+      <a href="#whitepaper" class="inline-block bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold py-3 px-6 rounded-full shadow-md hover:shadow-xl transition">
+        Explore Technical Whitepaper
+      </a>
+    </div>
+  </div>
+</section>
+<section id="roadmap" class="bg-black py-24 px-6">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-5xl font-bold text-center bg-clip-text bg-gradient-to-r from-electric-blue to-neon-green mb-10 animate-fade-up text-cyan-400">
+      Roadmap
+    </h2>
+    <p class="text-center text-gray-400 mb-16 text-lg animate-fade-up delay-100">
+      Our electrified journey to revolutionize blockchain-powered energy.
+    </p>
+
+    <div class="relative border-l-4 border-electric-blue pl-8 space-y-14 animate-fade-up delay-200">
+      <!-- Timeline Item -->
+      <div class="relative">
+        <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse"></div>
+        <h3 class="text-white font-bold text-2xl mb-2">Q1 2023 – Foundation</h3>
+        <ul class="space-y-1 text-gray-300 text-xl">
+          <li class="flex items-start gap-2"><span>⚡</span> Concept development and team formation</li>
+          <li class="flex items-start gap-2"><span>⚡</span> Initial whitepaper release</li>
+          <li class="flex items-start gap-2"><span>⚡</span> Seed funding secured</li>
+        </ul>
+      </div>
+
+      <!-- Timeline Item -->
+      <div class="relative">
+        <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse"></div>
+        <h3 class="text-white font-bold text-2xl mb-2">Q2 2023 – Development</h3>
+        <ul class="space-y-1 text-gray-300 text-xl">
+          <li class="flex items-start gap-2"><span>⚡</span> Smart contract development</li>
+          <li class="flex items-start gap-2"><span>⚡</span> First prototype of Smart Grid Node</li>
+          <li class="flex items-start gap-2"><span>⚡</span> Community building initiatives</li>
+        </ul>
+      </div>
+
+      <!-- Timeline Item -->
+      <div class="relative">
+        <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse"></div>
+        <h3 class="text-white font-bold text-2xl mb-2">Q3 2023 – Testing</h3>
+        <ul class="space-y-1 text-gray-300 text-xl">
+          <li class="flex items-start gap-2"><span>⚡</span> Testnet launch</li>
+          <li class="flex items-start gap-2"><span>⚡</span> Security audit completion</li>
+          <li class="flex items-start gap-2"><span>⚡</span> Strategic partnerships announcement</li>
+        </ul>
+      </div>
+
+      <!-- Timeline Item -->
+      <div class="relative">
+        <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse"></div>
+        <h3 class="text-white font-bold text-2xl mb-2">Q4 2023 – Launch</h3>
+        <ul class="space-y-1 text-gray-300 text-xl">
+          <li class="flex items-start gap-2"><span>⚡</span> Token Generation Event</li>
+          <li class="flex items-start gap-2"><span>⚡</span> Mainnet launch</li>
+          <li class="flex items-start gap-2"><span>⚡</span> Initial exchange listings</li>
+        </ul>
+      </div>
+
+      <!-- Timeline Item -->
+      <div class="relative">
+        <div class="absolute -left-4 top-1 w-6 h-6 bg-gradient-to-br from-neon-green to-electric-blue rounded-full shadow-lg animate-pulse "></div>
+        <h3 class="text-white font-bold text-2xl mb-2">Q1 2024 – Expansion</h3>
+        <ul class="space-y-1 text-gray-300 text-xl">
+          <li class="flex items-start gap-2"><span>⚡</span> Global node network expansion</li>
+          <li class="flex items-start gap-2"><span>⚡</span> Cross-chain integration</li>
+          <li class="flex items-start gap-2"><span>⚡</span> Developer grants program</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include Chart.js via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<section id="tokenomics" class=" py-20 px-4 bg-black">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Chart -->
+    <div class="w-full max-w-md mx-auto">
+      <canvas id="tokenomicsChart"></canvas>
+    </div>
+
+    <!-- Breakdown -->
+    <div>
+      <h2 class="text-4xl font-bold mb-4 text-cyan-400">Tokenomics</h2>
+      <p class="text-white mb-8">The economic model powering DeCharge</p>
+
+      <ul class="space-y-4 text-md text-white">
+        <li><span class="inline-block w-3 h-3 bg-green-500 rounded-full mr-2"></span><strong class="">Launch Supply (40%)</strong><br>Initial token distribution available at launch</li>
+        <li><span class="inline-block w-3 h-3 bg-blue-500 rounded-full mr-2"></span><strong class="">Staking Rewards (25%)</strong><br>Allocated for network participation incentives</li>
+        <li><span class="inline-block w-3 h-3 bg-teal-500 rounded-full mr-2"></span><strong class="">Ecosystem Fund (15%)</strong><br>Supporting development and partnerships</li>
+        <li><span class="inline-block w-3 h-3 bg-indigo-500 rounded-full mr-2"></span><strong class="">Team (10%)</strong><br>Vested over 3 years with 6-month cliff</li>
+        <li><span class="inline-block w-3 h-3 bg-purple-400 rounded-full mr-2"></span><strong class="">Airdrop (10%)</strong><br>Community incentives and early adopter rewards</li>
+      </ul>
+
+      <a href="#" class="inline-block mt-8 bg-gradient-to-r from-green-500 to-blue-500 text-white px-6 py-3 rounded-full font-semibold shadow hover:opacity-90 transition">
+        Download Tokenomics Paper
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Chart.js Script -->
+<script>
+  const ctx = document.getElementById('tokenomicsChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'pie',
+    data: {
+      labels: ['Launch Supply', 'Staking Rewards', 'Ecosystem Fund', 'Team', 'Airdrop'],
+      datasets: [{
+        data: [40, 25, 15, 10, 10],
+        backgroundColor: [
+          '#22c55e', // green
+          '#3b82f6', // blue
+          '#14b8a6', // teal
+          '#6366f1', // indigo
+          '#a78bfa'  // purple
+        ],
+        borderColor: '#fff',
+        borderWidth: 2
+      }]
+    },
+    options: {
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  });
+</script>
+
+<section id="community" class=" py-40 px-4 bg-black">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-bold mb-2 text-cyan-400">Community & Partners</h2>
+    <p class="text-white mb-12">Join our growing ecosystem of supporters and collaborators</p>
+
+    <!-- Community Avatars -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-6">Our Community</h3>
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <!-- Repeat these avatars -->
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">JD</div>
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">KL</div>
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">MN</div>
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">OP</div>
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">QR</div>
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">ST</div>
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">UV</div>
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">WX</div>
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">YZ</div>
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-blue-500 text-white font-bold flex items-center justify-center shadow-md hover:scale-105 transition">+</div>
+      </div>
+    </div>
+
+    <!-- Partner Logos -->
+    <div>
+      <h3 class="text-xl font-semibold text-white mb-6 ">Our Partners</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 justify-items-center">
+        <div class="bg-white shadow-lg rounded-xl px-6 py-4 text-center text-teal-600 font-semibold text-lg hover:scale-105 transition">
+          Solana<span class="text-blue-400">Labs</span>
+        </div>
+        <div class="bg-white shadow-lg rounded-xl px-6 py-4 text-center text-green-600 font-semibold text-lg hover:scale-105 transition">
+          GreenTech
+        </div>
+        <div class="bg-white shadow-lg rounded-xl px-6 py-4 text-center text-cyan-600 font-semibold text-lg hover:scale-105 transition">
+          EcoChain
+        </div>
+        <div class="bg-white shadow-lg rounded-xl px-6 py-4 text-center text-sky-600 font-semibold text-lg hover:scale-105 transition">
+          Power<span class="text-cyan-500">DAO</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Alpine.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+<section id="faq" class=" py-20 px-4 bg-black/80 backdrop-blur-md text-white">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-center  mb-2 text-cyan-400">Frequently Asked Questions</h2>
+    <p class="text-center text-white mb-12">Everything you need to know about DeCharge</p>
+
+    <div class="space-y-4">
+      <!-- FAQ Item -->
+      <div x-data="{ open: true }" class="bg-white shadow rounded-md p-5">
+        <button @click="open = !open" class="flex justify-between items-center w-full text-left font-semibold text-gray-900">
+          What is DeCharge?
+          <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div x-show="open" x-transition class="mt-3 text-gray-700">
+          DeCharge is a decentralized protocol built on Solana that connects clean energy production with blockchain technology. It allows for the tokenization of energy production, creating a transparent and efficient marketplace for sustainable energy.
+        </div>
+      </div>
+
+      <div x-data="{ open: false }" class="bg-white shadow rounded-md p-5">
+        <button @click="open = !open" class="flex justify-between items-center w-full text-left font-semibold text-gray-900">
+          How do Smart Grid Nodes work?
+          <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div x-show="open" x-transition class="mt-3 text-gray-700">
+          Smart Grid Nodes are specialized hardware devices that connect to renewable energy sources and validate energy production on the blockchain. They use secure oracle technology to ensure accurate reporting and tokenization of energy output.
+        </div>
+      </div>
+
+      <div x-data="{ open: false }" class="bg-white shadow rounded-md p-5">
+        <button @click="open = !open" class="flex justify-between items-center w-full text-left font-semibold text-gray-900">
+          What makes DeCharge sustainable?
+          <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div x-show="open" x-transition class="mt-3 text-gray-700">
+          DeCharge is built on Solana, one of the most energy-efficient blockchains. Additionally, our protocol incentivizes renewable energy production by creating a direct economic link between clean energy generation and token value. A portion of all transaction fees is also allocated to carbon offset initiatives.
+        </div>
+      </div>
+
+      <div x-data="{ open: false }" class="bg-white shadow rounded-md p-5">
+        <button @click="open = !open" class="flex justify-between items-center w-full text-left font-semibold text-gray-900">
+          How can I participate in the ecosystem?
+          <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div x-show="open" x-transition class="mt-3 text-gray-700">
+          There are multiple ways to participate: become a token holder through our upcoming token sale, join our staking program to earn rewards, become a node operator if you have access to renewable energy sources, or contribute to governance by voting on protocol proposals.
+        </div>
+      </div>
+
+      <div x-data="{ open: false }" class="bg-white shadow rounded-md p-5">
+        <button @click="open = !open" class="flex justify-between items-center w-full text-left font-semibold text-gray-900">
+          Has the smart contract been audited?
+          <svg :class="{'rotate-180': open}" class="w-5 h-5 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <div x-show="open" x-transition class="mt-3 text-gray-700">
+          Yes, our smart contracts have been audited by leading blockchain security firms. The full audit reports are available on our GitHub repository, and we maintain an ongoing bug bounty program.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Footer Section -->
+<footer class="bg-gradient-to-br from-teal-700 to-green-700 text-white py-16 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <!-- Newsletter -->
+    <h2 class="text-3xl md:text-4xl font-bold mb-2">Stay Connected</h2>
+    <p class="text-gray-200 mb-6">Join our newsletter to receive the latest updates and announcements</p>
+    <form class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-12">
+      <input
+        type="email"
+        placeholder="Your email address"
+        class="rounded-full px-6 py-3 w-full sm:w-96 text-gray-700 focus:outline-none"
+      />
+      <button
+        type="submit"
+        class="rounded-full bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold px-8 py-3 transition hover:opacity-90"
+      >
+        Subscribe
+      </button>
+    </form>
+
+    <!-- Bottom Section -->
+    <div class="flex flex-col md:flex-row md:justify-between items-center border-t border-white/20 pt-8 space-y-6 md:space-y-0">
+      <!-- Left: Logo and Text -->
+      <div class="text-center md:text-left">
+        <div class="flex items-center justify-center md:justify-start gap-2 mb-1">
+          <span class="text-xl">⚡</span>
+          <span class="text-xl font-semibold">DeCharge</span>
+        </div>
+        <p class="text-gray-200 text-sm">Powering the future of energy on-chain</p>
+      </div>
+
+      <!-- Center: Social Icons -->
+      <div class="flex items-center gap-6 text-white text-xl">
+        <a href="#" aria-label="Twitter" class="hover:text-gray-300">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" aria-label="Discord" class="hover:text-gray-300">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="#" aria-label="Medium" class="hover:text-gray-300">
+          <i class="fab fa-medium-m"></i>
+        </a>
+        <a href="#" aria-label="GitHub" class="hover:text-gray-300">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <!-- Right: Links -->
+      <div class="flex gap-6 text-sm text-gray-300">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Service</a>
+        <a href="#" class="hover:underline">Connect Wallet</a>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <p class="text-xs text-gray-400 mt-8">&copy; 2023 DeCharge Protocol. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Font Awesome for icons (include in <head>) -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
